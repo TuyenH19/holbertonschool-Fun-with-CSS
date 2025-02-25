@@ -1,0 +1,113 @@
+body {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  margin: 0;
+}
+
+/* Navigation Menu Container */
+.menu {
+  position: relative;
+  width: 90px;
+  height: 90px;
+}
+
+/* Hide default checkbox */
+.menu-open {
+  display: none;
+}
+
+/* Floating Circular Button */
+.menu-open-button {
+  background-color: #d32f2f; /* Red color */
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+/* 🔹 Font Awesome Menu Icon (☰) */
+.menu-open-button::before {
+  font-family: "FontAwesome";
+  content: "\f0c9"; /* Unicode for Font Awesome 'fa-bars' (☰) */
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  color: white;
+  font-size: 25px;
+  font-weight: 300;
+}
+
+
+/* Positioning Menu Items */
+.menu-item {
+  background: #d32f2f; /* Red */
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 24px;
+  transition: transform 0.4s ease-in-out, opacity 0.3s ease-in-out;
+  opacity: 0;
+  pointer-events: none;
+  border: 1px solid #b71c1c;
+}
+
+/* 🔹 Change to 'X' (fa-times) when checked */
+.menu-open:checked + .menu-open-button::before {
+  content: "\f00d"; /* Unicode for Font Awesome 'fa-times' (✖) */
+  font-weight: 100;
+}
+
+/* Show menu items when checkbox is checked */
+.menu-open:checked ~ .menu-item {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Position each menu item in an expanding circular pattern */
+.menu-item:nth-child(3) { transform: translate(-50%, 80px); }
+.menu-item:nth-child(4) { transform: translate(-50%, 150px); }
+.menu-item:nth-child(5) { transform: translate(-50%, 220px); }
+.menu-item:nth-child(6) { transform: translate(-50%, 290px); }
+.menu-item:nth-child(7) { transform: translate(-50%, 360px); }
+
+/* When checked, move the menu items outward */
+.menu-open:checked ~ .menu-item:nth-child(3) { transform: translate(-50%, 80px); }
+.menu-open:checked ~ .menu-item:nth-child(4) { transform: translate(-50%, 150px); }
+.menu-open:checked ~ .menu-item:nth-child(5) { transform: translate(-50%, 220px); }
+.menu-open:checked ~ .menu-item:nth-child(6) { transform: translate(-50%, 290px); }
+.menu-open:checked ~ .menu-item:nth-child(7) { transform: translate(-50%, 360px); }
+
+/* Animate Menu Icon into an "X" when checked */
+.menu-open:checked + .menu-open-button .menu-line-1 {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-open:checked + .menu-open-button .menu-line-2 {
+  opacity: 0;
+}
+
+.menu-open:checked + .menu-open-button .menu-line-3 {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+.menu-item:active,
+.menu-item:focus {
+  background: white; /* Change background to white */
+  color: #b71c1c; /* Change icon color to red */
+}
