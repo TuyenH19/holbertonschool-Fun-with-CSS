@@ -1,0 +1,34 @@
+:root {
+  --link-color: red;
+  /* set the font size of the element where it is used 
+    If the text size is 16px, then 0.5em = 8px.
+    If the text size is 20px, then 0.5em = 10px.*/
+  --link-underline-padding: 0em;
+}
+
+a {
+  color: var(--link-color);
+  display: inline-block;
+  /* Adds horizontal padding (left and right) of 0.5em around the link text
+  Ensures that when you hover over the link, the underline has extra space on both sides.*/
+  padding: 0 var(--link-underline-padding); 
+  text-decoration: none;
+}
+
+a:after {
+  background-color: var(--link-color);
+  content: '';
+  display: block;
+  height: .1em;
+  /* shifts the underline to the left by 0.5em (negative margin) */
+  margin-left: calc(var(--link-underline-padding) * -1);
+  margin-top: 0em;
+  transition: width .8s;
+  width: 0;
+}
+
+a:hover:after {
+  /* 100% → Width of the link text.
+  + var(--link-underline-padding) * 2 → Adds extra padding to both sides. */
+  width: calc(100% + var(--link-underline-padding) * 2);
+}
