@@ -7,21 +7,18 @@ body {
   margin: 0;
 }
 
-/* Navigation Menu Container */
 .menu {
   position: relative;
   width: 90px;
   height: 90px;
 }
 
-/* Hide default checkbox */
 .menu-open {
   display: none;
 }
 
-/* Floating Circular Button */
 .menu-open-button {
-  background-color: #d32f2f; /* Red color */
+  background-color: #d32f2f;
   border-radius: 50%;
   width: 60px;
   height: 60px;
@@ -38,17 +35,15 @@ body {
 /* 🔹 Font Awesome Menu Icon (☰) */
 .menu-open-button::before {
   font-family: "FontAwesome";
-  content: "\f0c9"; /* Unicode for Font Awesome 'fa-bars' (☰) */
+  content: "\f0c9";
   transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
   color: white;
   font-size: 25px;
   font-weight: 300;
 }
 
-
-/* Positioning Menu Items */
 .menu-item {
-  background: #d32f2f; /* Red */
+  background: #d32f2f;
   border-radius: 50%;
   width: 60px;
   height: 60px;
@@ -69,7 +64,7 @@ body {
 
 /* 🔹 Change to 'X' (fa-times) when checked */
 .menu-open:checked + .menu-open-button::before {
-  content: "\f00d"; /* Unicode for Font Awesome 'fa-times' (✖) */
+  content: "\f00d";
   font-weight: 100;
 }
 
@@ -108,6 +103,6 @@ body {
 
 .menu-item:active,
 .menu-item:focus {
-  background: white; /* Change background to white */
-  color: #b71c1c; /* Change icon color to red */
+  background: white;
+  color: #b71c1c;
 }
