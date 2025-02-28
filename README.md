@@ -26,9 +26,9 @@ With the html code and image provided, create css file to get the below layout
     </html>
     ```
 * Image provided:
-    ![alt text](/workspaces/Holberton/holbertonschool-Fun-with-CSS/images/0-sprite.png)
+    ![alt text](images/0-sprite.png)
 * Result required:
-    ![alt text](/workspaces/Holberton/holbertonschool-Fun-with-CSS/images/0-image_req.png)
+    ![alt text](images/0-image_req.png)
 
 ## Task1. Move the (under)line
 
