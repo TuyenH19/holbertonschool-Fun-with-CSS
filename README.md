@@ -51,7 +51,7 @@ With the html code and image provided, create css file to get the below layout
 ```
 
 * Layout required
-    ![alt text](/workspaces/Holberton/holbertonschool-Fun-with-CSS/images/1-move_underline.gif)
+    ![alt text](images/1-move_underline.gif)
 
 ## Task2. Toggle
 
@@ -78,7 +78,7 @@ With the html code and image provided, create css file to get the below layout
 ```
 
 * Layout required
-    ![alt text](/workspaces/Holberton/holbertonschool-Fun-with-CSS/images/2-toggle.png)
+    ![alt text](images/2-toggle.png)
 
 ## Task3. Menu
 
@@ -115,5 +115,5 @@ With the html code and image provided, create css file to get the below layout
 ```
 
 * Layout/animation required
-    ![alt text](/workspaces/Holberton/holbertonschool-Fun-with-CSS/images/3-menu.gif)
+    ![alt text](images/3-menu.gif)
 
